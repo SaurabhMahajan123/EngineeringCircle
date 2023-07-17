@@ -42,6 +42,8 @@ exports.employeeCreate = async (req, resp) => {
 exports.employeeUpdate = async (req, resp) => {
   const pid = req.params.id;
 
+  console.log(req.body);
+
   try {
     const a = await empSchema.findOneAndUpdate({ e_id: pid }, req.body, {
       new: true,
