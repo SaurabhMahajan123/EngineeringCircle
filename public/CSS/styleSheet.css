@@ -80,9 +80,7 @@ body {
 
 .adminWorkArea {
     background-color: rgb(196, 159, 231);
-    text-align: center;
-    
-   
+  
 }
 
 .sideMenu{
@@ -103,12 +101,40 @@ body {
     width: 40%;
 }
 
+
 .oneEmpTable{
     width: 50%;
-    /* margin-top: 10%; */
+   
     text-align: center;
 }
 
-#empUpdateBtn{
+
+.oneEmpTable a{
     width: 10%;
+   
+   
 }
+
+
+.addEmployeeForm{
+    width: 50%;
+}
+
+/* student */
+.stdIdSearchForm{
+    width: 40%;
+}
+
+.oneStdTable{
+    width: 50%;
+   
+    text-align: center;
+}
+
+
+.oneStdTable a{
+    width: 10%;  
+   
+}
+
+

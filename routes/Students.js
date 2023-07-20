@@ -9,6 +9,7 @@ router
 .post("/studentCreate", controllerModule.studentCreate)
 .get("/student/:id",  controllerModule.getStudent)
 .get("/student",  controllerModule.getStudent)
+.get("/Allstudent",  controllerModule.getAllStudent)
 .put("/studentUpdate/:id",controllerModule.studentUpdate)
 .delete("/studentDelete/:id",controllerModule.studentDelete)
 

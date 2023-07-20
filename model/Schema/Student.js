@@ -16,7 +16,7 @@ const studentSchema = new Schema({
         "s_center_id":{type: Number,required: true},
         "s_course_id":{type: String,required: true},
         "s_doa":{type: Date,required: true},
-        "s_feepaid":{type: Number,required:true},
+        "s_feepaid":{type: Number},
         "s_dor":{type:Date}
 
   })

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="CSS/styleSheet.css" />
+
+    <title>EngineeringCircle-Admin-NewRegistration</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row text-center bg-light" style="position: fixed; top: 0; right: 0; width: 100vw;">
+        <div class="col" id="adminPortal" >Admin Portal</div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 text-light " id="sideBar" style="padding-top: 100px;">
+          <%-include('../AdminHeader&SideBar.ejs')%>
+        </div>
+
+        <div class="col-lg-9 px-0 adminWorkArea" style="padding-top: 100px;">
+          <form class="form form-control  mt-4 mx-auto  addStudentForm" style="width: 50%;">
+            <label for="" class="form-label">Student Id</label>
+            <input type="text" class="form-control" name="s_id" id="generatedStdId" placeholder="Click On Generate Button" required>
+             
+            <label for="" class="form-label">FullName</label>
+            <input type="text" class="form-control" name="s_name" id="name" placeholder="Enter Student Name" required>
+            <label for="" class="form-label">Email</label>
+            <input type="email" class="form-control" name="s_email" id="email" placeholder="Enter Student Email" required>
+            <label for="" class="form-label">Date Of Birth</label>
+            <input type="date" class="form-control" name="s_dob" id="dob" placeholder="Enter Date of Birth" required>
+            <label for="" class="form-label">Center Id</label>
+            <input type="number" class="form-control" name="s_center_id" id="center" placeholder="Enter CenterId" required>
+            <label for="" class="form-label">Course Id</label>
+            <input type="text" class="form-control" name="s_course_id" id="course" placeholder="Enter CourseId" required>
+            <label for="" class="form-label">Mobile No</label>
+            <input type="number" class="form-control" name="s_mob_no" id="mobile" placeholder="Enter MobileNo" required>
+            <label for="" class="form-label">Permanent Address</label>
+            <input type="text" class="form-control" name="s_address" id="addresss" placeholder="Enter Student Address" required>
+            <label for="" class="form-label">Date Of Admission</label>
+            <input type="date" class="form-control" name="s_doa" id="doa" placeholder="Enter Date Of Admission" required>
+            <input type="hidden" class="form-control" name="s_dor" id="dor">
+            <input type="hidden" class="form-control" name="s_feepaid" id="feepaid">
+            
+            
+            <input type="submit"  class="btn btn-primary mx-auto mt-4"  value="submit">
+            <input type="reset"  class="btn btn-danger mx-auto mt-4"  value="reset">
+            <input type="button"  class="btn btn-secondary mt-4" style="margin-right: 0px;" id="stdIdGenerator" value="Generate Student Id">
+            
+
+            </form>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

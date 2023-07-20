@@ -16,6 +16,15 @@ router
     resp.status(200).render("Admin")
   })
   .get('/searchEmployee',(req ,resp)=>{
-    resp.status(200).render("SearchEmployee")
+    resp.status(200).render("Employees/SearchEmployee")
+  })
+  .get('/addEmployee',(req,resp)=>{
+    resp.status(200).render("Employees/AddEmployee")
+  })
+  .get('/searchStudent',(req ,resp)=>{
+    resp.status(200).render("Students/SearchStudent")
+  })
+  .get('/addStudent',(req,resp)=>{
+    resp.status(200).render("Students/AddStudent")
   })
 exports.router = router;

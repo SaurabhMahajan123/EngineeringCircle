@@ -6,7 +6,7 @@ const studentSchema = model.studentSchema;
 exports.getStudent = async (req, resp) => {
   if (req.params.id == null) {
     const all = await studentSchema.find();
-    resp.status(200).send(all);
+    resp.status(200).render("Students/AllStudent",{all});
   } else if (req.params != null) {
     const data = await studentSchema.findOne({ s_id: { $eq: req.params.id } });
 
@@ -18,8 +18,21 @@ exports.getStudent = async (req, resp) => {
   }
 };
 
+
+
+exports.getAllStudent = async (req, resp) => {
+
+    const all = await studentSchema.find();
+    resp.status(200).send(all);
+ 
+};
+
+
+
 // create new student
 exports.studentCreate = async (req, resp) => {
+
+  console.log(req.body);
   const student = new studentSchema(req.body);
 
   try {
@@ -33,6 +46,8 @@ exports.studentCreate = async (req, resp) => {
 
 // update existing employee
 exports.studentUpdate = async (req, resp) => {
+  
+  console.log(req.body);
   const pid = req.params.id;
 
   try {

@@ -9,6 +9,7 @@ router
 .post("/employeeCreate", controllerModule.employeeCreate)
 .get("/employee/:id",  controllerModule.getEmployee)
 .get("/employee",  controllerModule.getEmployee)
+.get("/Allemployee",  controllerModule.getAllEmployee)
 .put("/employeeUpdate/:id",controllerModule.employeeUpdate)
 .delete("/employeeDelete/:id",controllerModule.employeeDelete)
 

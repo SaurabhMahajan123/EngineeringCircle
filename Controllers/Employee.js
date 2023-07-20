@@ -11,12 +11,13 @@ exports.getEmployee = async (req, resp) => {
   console.log(req.params.id);
   if (req.params.id == null) {
     const all = await empSchema.find();
-    resp.status(200).render("AllEmployee",{all})
+    resp.status(200).render("Employees/AllEmployee",{all})
   } else if (req.params != null) {
     const data = await empSchema.findOne({ e_id: { $eq: req.params.id } });
 
     if (data === null) {
-      resp.status(404).send("Not Found");
+
+      resp.send("Not Found");
     } else {
 
       // resp.status(200).render("Searchemployee")
@@ -25,8 +26,23 @@ exports.getEmployee = async (req, resp) => {
   }
 };
 
+
+// to send all employee data & no html page 
+
+exports.getAllEmployee = async (req, resp) => {
+
+
+    const all = await empSchema.find();
+    resp.status(200).send(all); 
+};
+
+
+
+
 // create new employee
 exports.employeeCreate = async (req, resp) => {
+
+ 
   const employee = new empSchema(req.body);
 
   try {
